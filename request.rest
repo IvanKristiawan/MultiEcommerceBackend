@@ -1,0 +1,29 @@
+### Kategori
+GET http://localhost:5000/kategoris
+
+###
+GET http://localhost:5000/kategoris/6300385d18aa7a7fdc6f0e34
+
+###
+GET http://localhost:5000/kategoriByJenis/Buku
+
+###
+POST http://localhost:5000/kategoris
+Content-Type: application/json
+
+{
+    "jenisKategori": "Buku",
+    "namaKategori": "Hukum"
+}
+
+###
+PATCH http://localhost:5000/kategoris/6300387718aa7a7fdc6f0e37
+Content-Type: application/json
+
+{
+    "jenisKategori": "Buku",
+    "namaKategori": "Hukum"
+}
+
+###
+DELETE http://localhost:5000/kategoris/6300387718aa7a7fdc6f0e37
