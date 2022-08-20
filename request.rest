@@ -57,3 +57,41 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/subKategoris/63004e8f29377081911162b8
+
+### Produk
+GET http://localhost:5000/produks
+
+###
+GET http://localhost:5000/produks/63004e6829377081911162b3
+
+###
+GET http://localhost:5000/produkBySubKategori/63004e6829377081911162b3
+
+###
+POST http://localhost:5000/produks
+Content-Type: application/json
+
+{
+    "subKategoriId": "63004e6829377081911162b3",
+    "namaProduk": "Buku Dekorasi 2",
+    "hargaProduk": 2000,
+    "hargaDiskonProduk": 1900,
+    "deksripsi": "Buku Dekorasi 2 Deskripsi",
+    "totalBintangProduk": 4.7
+}
+
+###
+PATCH http://localhost:5000/produks/6300514c0e83b165d25f54b6
+Content-Type: application/json
+
+{
+    "subKategoriId": "63004e6829377081911162b3",
+    "namaProduk": "Buku Dekorasi 2",
+    "hargaProduk": 2000,
+    "hargaDiskonProduk": 900,
+    "deksripsi": "Buku Dekorasi Deskripsi",
+    "totalBintangProduk": 4.8
+}
+
+###
+DELETE http://localhost:5000/produks/630051d50e83b165d25f54ca
