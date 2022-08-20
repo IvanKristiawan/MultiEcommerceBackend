@@ -27,3 +27,33 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/kategoris/6300387718aa7a7fdc6f0e37
+
+### Sub Kategori
+GET http://localhost:5000/subKategoris
+
+###
+GET http://localhost:5000/subKategoris/63004e6829377081911162b3
+
+###
+GET http://localhost:5000/subKategoriByKategori/6300385d18aa7a7fdc6f0e34
+
+###
+POST http://localhost:5000/subKategoris
+Content-Type: application/json
+
+{
+    "kategoriId": "6300385d18aa7a7fdc6f0e34",
+    "namaSubKategori": "Buku Desain Rumah"
+}
+
+###
+PATCH http://localhost:5000/subKategoris/63004e8f29377081911162b8
+Content-Type: application/json
+
+{
+    "kategoriId": "6300385d18aa7a7fdc6f0e34",
+    "namaSubKategori": "Buku Desain Rumah"
+}
+
+###
+DELETE http://localhost:5000/subKategoris/63004e8f29377081911162b8
