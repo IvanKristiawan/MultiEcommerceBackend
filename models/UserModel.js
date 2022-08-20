@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
   {
-    namaLengkap: { type: String },
+    username: { type: String },
     email: { type: String },
-    kataSandi: { type: String },
+    password: { type: String },
     tanggalLahir: { type: String },
     jenisKelamin: { type: String },
     nomorTelepon: { type: String },
@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema(
     kota: { type: String },
     alamat: { type: String },
     kodePos: { type: String },
+    isAdmin: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

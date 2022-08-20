@@ -95,3 +95,61 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/produks/630051d50e83b165d25f54ca
+
+### Register
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username":"Ivan Kristiawan",
+    "email":"ivanteens@gmail.com",
+    "password": "ivanteens",
+    "tanggalLahir": "20-08-2022",
+    "jenisKelamin": "Laki-laki",
+    "nomorTelepon": "0895421397226",
+    "provinsi": "Yogyakarta",
+    "kota": "Sleman",
+    "alamat": "Jl. Babarsari II",
+    "kodePos": "555"
+}
+
+### Login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "ivanadmin@gmail.com",
+    "password": "ivanadmin"
+}
+
+### User
+POST http://localhost:5000/users/630059069285f9e881e77515
+Content-Type: application/json
+
+{
+    "id": "630059269285f9e881e77518",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDA1OTI2OTI4NWY5ZTg4MWU3NzUxOCIsImlhdCI6MTY2MDk2NzM1MSwiZXhwIjoxNjYyMjYzMzUxfQ.b_2FbnmmkCFMbcLI_OIzwS2JpRYc2JLFMJVVhAJTjHE"
+}
+
+### 
+GET http://localhost:5000/users
+
+###
+PUT http://localhost:5000/users/630055c6e68662616604baaa
+Content-Type: application/json
+
+{
+    "username": "Ivan Kristiawan",
+    "password": "ivanteens",
+    "id": "630055c6e68662616604baaa",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDA1NWM2ZTY4NjYyNjE2NjA0YmFhYSIsImlhdCI6MTY2MDk2NjUyN30.2rgiX0G_MfQC4JY7ZfLWmN28TY96_upSMzexOJ4XU2M"
+}
+
+###
+DELETE http://localhost:5000/users/630059069285f9e881e77515
+Content-Type: application/json
+
+{
+    "id": "630059269285f9e881e77518",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDA1OTI2OTI4NWY5ZTg4MWU3NzUxOCIsImlhdCI6MTY2MDk2NzM1MSwiZXhwIjoxNjYyMjYzMzUxfQ.b_2FbnmmkCFMbcLI_OIzwS2JpRYc2JLFMJVVhAJTjHE"
+}

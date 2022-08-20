@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 5000;
 import KategoriRoute from "./routes/KategoriRoute.js";
 import SubKategoriRoute from "./routes/SubKategoriRoute.js";
 import ProdukRoute from "./routes/ProdukRoute.js";
+import UserRoute from "./routes/UserRoute.js";
+import AuthRoute from "./routes/AuthRoute.js";
 
 const app = express();
 mongoose
@@ -21,6 +23,8 @@ app.use(express.json());
 app.use(KategoriRoute);
 app.use(SubKategoriRoute);
 app.use(ProdukRoute);
+app.use("/users", UserRoute);
+app.use("/auth", AuthRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
